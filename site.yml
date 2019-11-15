@@ -1,0 +1,15 @@
+---
+- name: Jenkins Ansible
+  hosts: all
+  gather_facts: true
+  become: yes
+  become_method: sudo
+  tags: [jenkins]
+  vars:
+    - update_apt_cache: yes
+    - force_apt_get: true
+
+  roles:
+    - awscli
+    - docker
+    - jenkins

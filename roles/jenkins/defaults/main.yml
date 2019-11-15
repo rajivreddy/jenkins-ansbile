@@ -1,0 +1,170 @@
+---
+jenkins:
+  - { plugin_name: javadoc, version:1.5 }
+  - { plugin_name: envinject-api, version:1.7 }
+  - { plugin_name: kubernetes-credentials, version:0.4.1 }
+  - { plugin_name: pipeline-milestone-step, version:1.3.1 }
+  - { plugin_name: token-macro, version:2.10 }
+  - { plugin_name: pipeline-build-step, version:2.9 }
+  - { plugin_name: jquery-detached, version:1.2.1 }
+  - { plugin_name: blueocean-i18n, version:1.19.0 }
+  - { plugin_name: script-security, version:1.67 }
+  - { plugin_name: github-oauth, version:0.33 }
+  - { plugin_name: blueocean-web, version:1.19.0 }
+  - { plugin_name: docker-commons, version:1.15 }
+  - { plugin_name: blueocean-dashboard, version:1.19.0 }
+  - { plugin_name: ansible, version:1.0 }
+  - { plugin_name: blueocean-rest-impl, version:1.19.0 }
+  - { plugin_name: aws-java-sdk, version:1.11.670 }
+  - { plugin_name: jackson2-api, version:2.10.0 }
+  - { plugin_name: mercurial, version:2.8 }
+  - { plugin_name: mailer, version:1.29 }
+  - { plugin_name: workflow-step-api, version:2.20 }
+  - { plugin_name: copyartifact, version:1.43 }
+  - { plugin_name: lockable-resources, version:2.7 }
+  - { plugin_name: credentials, version:2.3.0 }
+  - { plugin_name: durable-task, version:1.33 }
+  - { plugin_name: blueocean-executor-info, version:1.19.0 }
+  - { plugin_name: windows-slaves, version:1.5 }
+  - { plugin_name: docker-workflow, version:1.21 }
+  - { plugin_name: antisamy-markup-formatter, version:1.6 }
+  - { plugin_name: workflow-job, version:2.36 }
+  - { plugin_name: workflow-basic-steps, version:2.18 }
+  - { plugin_name: docker-java-api, version:3.0.14 }
+  - { plugin_name: packer, version:1.5 }
+  - { plugin_name: kubernetes, version:1.21.2 }
+  - { plugin_name: pipeline-github-lib, version:1.0 }
+  - { plugin_name: cloudbees-bitbucket-branch-source, version:2.6.0 }
+  - { plugin_name: hashicorp-vault-plugin, version:3.0.0 }
+  - { plugin_name: github, version:1.29.5 }
+  - { plugin_name: plain-credentials, version:1.5 }
+  - { plugin_name: handlebars, version:1.1.1 }
+  - { plugin_name: matrix-auth, version:2.5 }
+  - { plugin_name: git-changelog, version:2.21 }
+  - { plugin_name: run-condition, version:1.2 }
+  - { plugin_name: greenballs, version:1.15 }
+  - { plugin_name: blueocean-display-url, version:2.3.0 }
+  - { plugin_name: generic-webhook-trigger, version:1.63 }
+  - { plugin_name: workflow-multibranch, version:2.21 }
+  - { plugin_name: pipeline-stage-view, version:2.12 }
+  - { plugin_name: blueocean-events, version:1.19.0 }
+  - { plugin_name: blueocean-autofavorite, version:1.2.4 }
+  - { plugin_name: jquery, version:1.12.4-1 }
+  - { plugin_name: ace-editor, version:1.1 }
+  - { plugin_name: cloudbees-folder, version:6.9 }
+  - { plugin_name: s3, version:0.11.2 }
+  - { plugin_name: subversion, version:2.12.2 }
+  - { plugin_name: blueocean-rest, version:1.19.0 }
+  - { plugin_name: email-ext, version:2.68 }
+  - { plugin_name: workflow-scm-step, version:2.9 }
+  - { plugin_name: pipeline-stage-step, version:2.3 }
+  - { plugin_name: git-server, version:1.8 }
+  - { plugin_name: pipeline-stage-tags-metadata, version:1.4.0 }
+  - { plugin_name: workflow-cps-global-lib, version:2.15 }
+  - { plugin_name: aws-credentials, version:1.28 }
+  - { plugin_name: jira-trigger, version:1.0.0 }
+  - { plugin_name: command-launcher, version:1.3 }
+  - { plugin_name: role-strategy, version:2.15 }
+  - { plugin_name: slack-uploader, version:1.7 }
+  - { plugin_name: security-inspector, version:0.5 }
+  - { plugin_name: jenkins-design-language, version:1.19.0 }
+  - { plugin_name: jsch, version:0.1.55.1 }
+  - { plugin_name: pubsub-light, version:1.13 }
+  - { plugin_name: github-api, version:1.95 }
+  - { plugin_name: blueocean-github-pipeline, version:1.19.0 }
+  - { plugin_name: git, version:4.0.0 }
+  - { plugin_name: github-branch-source, version:2.5.8 }
+  - { plugin_name: variant, version:1.3 }
+  - { plugin_name: workflow-api, version:2.37 }
+  - { plugin_name: ssh-slaves, version:1.31.0 }
+  - { plugin_name: git-client, version:3.0.0 }
+  - { plugin_name: trilead-api, version:1.0.5 }
+  - { plugin_name: momentjs, version:1.1.1 }
+  - { plugin_name: resource-disposer, version:0.14 }
+  - { plugin_name: structs, version:1.20 }
+  - { plugin_name: scm-api, version:2.6.3 }
+  - { plugin_name: aqua-security-scanner, version:3.0.21 }
+  - { plugin_name: git-parameter, version:0.9.11 }
+  - { plugin_name: blueocean-bitbucket-pipeline, version:1.19.0 }
+  - { plugin_name: blueocean-git-pipeline, version:1.19.0 }
+  - { plugin_name: anchore-container-scanner, version:1.0.20 }
+  - { plugin_name: pipeline-model-declarative-agent, version:1.1.1 }
+  - { plugin_name: amazon-ecr, version:1.6 }
+  - { plugin_name: maven-plugin, version:3.4 }
+  - { plugin_name: pam-auth, version:1.6 }
+  - { plugin_name: docker-plugin, version:1.1.8 }
+  - { plugin_name: display-url-api, version:2.3.2 }
+  - { plugin_name: ant, version:1.10 }
+  - { plugin_name: parameterized-trigger, version:2.35.2 }
+  - { plugin_name: jira, version:3.0.10 }
+  - { plugin_name: jdk-tool, version:1.3 }
+  - { plugin_name: workflow-durable-task-step, version:2.35 }
+  - { plugin_name: workflow-aggregator, version:2.6 }
+  - { plugin_name: timestamper, version:1.10 }
+  - { plugin_name: branch-api, version:2.5.4 }
+  - { plugin_name: pipeline-rest-api, version:2.12 }
+  - { plugin_name: fluentd, version:0.1.5 }
+  - { plugin_name: matrix-project, version:1.14 }
+  - { plugin_name: gradle, version:1.34 }
+  - { plugin_name: ldap, version:1.21 }
+  - { plugin_name: built-on-column, version:1.1 }
+  - { plugin_name: kubernetes-client-api, version:4.6.2-1 }
+  - { plugin_name: blueocean-jwt, version:1.19.0 }
+  - { plugin_name: favorite, version:2.3.2 }
+  - { plugin_name: ssh-credentials, version:1.18 }
+  - { plugin_name: blueocean-commons, version:1.19.0 }
+  - { plugin_name: sse-gateway, version:1.20 }
+  - { plugin_name: ws-cleanup, version:0.37 }
+  - { plugin_name: htmlpublisher, version:1.21 }
+  - { plugin_name: bouncycastle-api, version:2.17 }
+  - { plugin_name: gitlab-oauth, version:1.5 }
+  - { plugin_name: slack, version:2.34 }
+  - { plugin_name: pipeline-graph-analysis, version:1.10 }
+  - { plugin_name: blueocean, version:1.19.0 }
+  - { plugin_name: authentication-tokens, version:1.3 }
+  - { plugin_name: workflow-support, version:3.3 }
+  - { plugin_name: handy-uri-templates-2-api, version:2.1.8-1.0 }
+  - { plugin_name: blueocean-config, version:1.19.0 }
+  - { plugin_name: blueocean-pipeline-scm-api, version:1.19.0 }
+  - { plugin_name: credentials-binding, version:1.20 }
+  - { plugin_name: blueocean-jira, version:1.19.0 }
+  - { plugin_name: pipeline-input-step, version:2.11 }
+  - { plugin_name: build-timeout, version:1.19 }
+  - { plugin_name: envinject, version:2.3.0 }
+  - { plugin_name: workflow-cps, version:2.76 }
+  - { plugin_name: blueocean-pipeline-editor, version:1.19.0 }
+  - { plugin_name: jenkins-multijob-plugin, version:1.32 }
+  - { plugin_name: mapdb-api, version:1.0.9.0 }
+  - { plugin_name: pipeline-model-extensions, version:1.4.0 }
+  - { plugin_name: blueocean-core-js, version:1.19.0 }
+  - { plugin_name: blueocean-personalization, version:1.19.0 }
+  - { plugin_name: feature-branch-notifier, version:1.4 }
+  - { plugin_name: pipeline-model-api, version:1.4.0 }
+  - { plugin_name: google-login, version:1.6 }
+  - { plugin_name: versionnumber, version:1.9 }
+  - { plugin_name: external-monitor-job, version:1.7 }
+  - { plugin_name: junit, version:1.28 }
+  - { plugin_name: blueocean-pipeline-api-impl, version:1.19.0 }
+  - { plugin_name: apache-httpcomponents-client-4-api, version:4.5.10-2.0 }
+  - { plugin_name: conditional-buildstep, version:1.3.6 }
+  - { plugin_name: pipeline-model-definition, version:1.4.0 }
+
+files_list:
+  - config.xml
+  - hudson.model.UpdateCenter.xml
+  - secret.key
+  - secret.key.not-so-secret
+  - users/users.xml
+  - users/config.xml
+  - users/rajivreddy_7818797636773562190/config.xml
+  - .install.UpgradeWizard.state
+  - jenkins.plugins.slack.SlackNotifier.xml
+  - .plugins.timestamper.TimestamperConfig.xml
+  - org.jenkinsci.plugins.fluentd.Fluentd.xml
+  - hudson.plugins.git.GitTool.xml
+  - credentials.xml
+  - jenkins.model.JenkinsLocationConfiguration.xml
+  - identity.key.enc
+  - hudson.plugins.emailext.ExtendedEmailPublisher.xml
+  - nodeMonitors.xml
+

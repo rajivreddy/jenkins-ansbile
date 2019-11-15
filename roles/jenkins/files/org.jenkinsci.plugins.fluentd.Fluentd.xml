@@ -1,0 +1,7 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<org.jenkinsci.plugins.fluentd.Fluentd_-DescriptorImpl plugin="fluentd@0.1.5">
+  <loggerName>Jenkins</loggerName>
+  <host>localhost</host>
+  <port>24224</port>
+  <enableGerritTriggeredBuildListener>false</enableGerritTriggeredBuildListener>
+</org.jenkinsci.plugins.fluentd.Fluentd_-DescriptorImpl>

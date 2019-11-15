@@ -1,0 +1,53 @@
+- name : install aptititude
+  apt: 
+    name: aptitude
+- name: Update all packages to the latest version
+  apt:
+    upgrade: yes
+- name: Install a list of packages
+  apt:
+    name: "{{ packages }}"
+  vars:
+    packages:
+    - software-properties-common
+    - wget
+    - curl
+    - git
+- name: Add an Apt signing key, uses whichever key is at the URL
+  apt_key:
+    url: https://download.docker.com/linux/ubuntu/gpg
+    state: present
+- apt_repository:
+    repo: deb https://download.docker.com/linux/ubuntu bionic stable
+    state: present
+- name: Run the equivalent of "apt-get update" as a separate step
+  apt:
+    update_cache: yes
+
+- name: Install a list of packages for Docker
+  apt:
+    name: "{{ packages }}"
+  vars:
+    packages:
+    - "docker-ce"
+    - "docker-ce-cli"
+    - "containerd.io"
+    - "software-properties-common"
+  notify: restart docker
+- name: ensure docker is running
+  service:
+    name: docker
+    state: started
+- name: installing ansible repo
+  apt_repository:
+    repo: ppa:ansible/ansible
+- name: Run the equivalent of "apt-get update" as a separate step
+  apt:
+    update_cache: yes
+
+- name: Install a list of packages for Ansible
+  apt:
+    name: "{{ packages }}"
+  vars:
+    packages:
+    - "ansible"

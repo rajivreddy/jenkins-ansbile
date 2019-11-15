@@ -1,0 +1,11 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<jenkins.plugins.slack.SlackNotifier_-DescriptorImpl plugin="slack@2.34">
+  <baseUrl></baseUrl>
+  <teamDomain>srijan</teamDomain>
+  <tokenCredentialId>slack-token</tokenCredentialId>
+  <botUser>true</botUser>
+  <sendAsText>false</sendAsText>
+  <iconEmoji></iconEmoji>
+  <username></username>
+  <room>#oc-monitoring, #oc-devops</room>
+</jenkins.plugins.slack.SlackNotifier_-DescriptorImpl>
