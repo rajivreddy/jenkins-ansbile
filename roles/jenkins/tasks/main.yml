@@ -17,26 +17,32 @@
 - wait_for:
     port: 8080
 
-- name: Check that the admin password file exists
-  stat:
-    path: /var/lib/jenkins/secrets/initialAdminPassword
-  register: stat_result
-
 - name: Get Admin Password
   become: yes
   become_method: sudo
   shell: cat /var/lib/jenkins/secrets/initialAdminPassword
-  when: stat_result.stat.exists == True
   register: myoutput
 
 - debug: var=myoutput.stdout_lines
 
-# - name: Download foo.conf
-#   get_url:
-#     url: https://updates.jenkins.io/latest/{{ item.plugin_name }}.hpi
-#     dest: /var/lib/jenkins/plugins/{{ item.plugin_name }}.hpi
-#     owner: jenkins
-#     group: jenkins
+- name: Create a directory if it does not exist
+  file:
+    path: /var/lib/jenkins/init.groovy.d
+    state: directory
+    owner: jenkins
+    owner: jenkins
+    mode: '0755'
+
+## Adding Init.d groovy scripts to create admin user
+- name: configure default users
+  template:
+    src: basic-security.groovy.j2
+    dest: /var/lib/jenkins/init.groovy.d/basic-security.groovy
+    owner: jenkins
+    owner: jenkins
+    mode: 0775
+  register: restart_jenkins
+
 - name: Install specific version of the plugin
   jenkins_plugin:
     name: "{{ item.plugin_name }}"
@@ -196,10 +202,4 @@
     - { plugin_name: apache-httpcomponents-client-4-api, version: 4.5.10-2.0 }
     - { plugin_name: conditional-buildstep, version: 1.3.6 }
     - { plugin_name: pipeline-model-definition, version: 1.4.0 }
-# - name: Copy Configs to hosts
-#   copy:
-#     src: item
-#     dest: /var/lib/jenkins
-#     owner: jenkins
-#     group: jenkins
-#   with_items: "{{ files_list }}"
+

@@ -32,22 +32,8 @@
     - "docker-ce"
     - "docker-ce-cli"
     - "containerd.io"
-    - "software-properties-common"
   notify: restart docker
 - name: ensure docker is running
   service:
     name: docker
     state: started
-- name: installing ansible repo
-  apt_repository:
-    repo: ppa:ansible/ansible
-- name: Run the equivalent of "apt-get update" as a separate step
-  apt:
-    update_cache: yes
-
-- name: Install a list of packages for Ansible
-  apt:
-    name: "{{ packages }}"
-  vars:
-    packages:
-    - "ansible"
